@@ -1,52 +1,51 @@
 context:
-    version: 4.1.0b7
+  version: "4.1.0"
 
 package:
-    name: zitadel-client
-    version: ${{ version }}
+  name: zitadel-client
+  version: ${{ version }}
 
 source:
-    - url: https://pypi.org/packages/source/z/zitadel-client/zitadel_client-${{ version }}.tar.gz
-      sha256: 7603d91e41a4919045cac8ccc224547915049cf35b3d637aceefcbc491047ce4
+  - url: https://pypi.org/packages/source/z/zitadel-client/zitadel_client-${{ version }}.tar.gz
+    sha256: 9fe309030546fd33c9f677bc326e6610488ae830a5fef353320761ce35579a5a
 
 build:
-    number: 0
-    script: ${{ PYTHON }} -m pip install . -vv
-    noarch: python
+  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
-    host:
-        - python ${{ python_min }}.*
-        - poetry-core >=1.0.0
-        - pip
-    run:
-        - python >=${{ python_min }}
-        - python !=3.9.0
-        - python !=3.9.1
-        - authlib <2.0.0,>=1.3.2
-        - cryptography <45.0.0,>=44.0.1
-        - pydantic >=2
-        - python-dateutil >=2.8.2
-        - requests <3.0.0,>=2.32.4
-        - typing-extensions >=4.7.1
-        - urllib3 <3.0.0,>=1.25.3
+  host:
+    - python ${{ python_min }}.*
+    - poetry-core >=1.0.0
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - python !=3.9.0
+    - python !=3.9.1
+    - authlib <2.0.0,>=1.3.2
+    - pydantic >=2
+    - python-dateutil >=2.8.2
+    - requests <3.0.0,>=2.32.4
+    - typing-extensions >=4.7.1
+    - urllib3 <3.0.0,>=1.25.3
 
 tests:
-    - python:
-          python_version: ${{ python_min }}.*
-          imports:
-              - zitadel_client
-              - zitadel_client.zitadel
-              - zitadel_client.exceptions
-          pip_check: true
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - zitadel_client
+        - zitadel_client.zitadel
+        - zitadel_client.exceptions
+      pip_check: true
 
 about:
-    summary: Official Zitadel SDK for Python. Authenticate and access Zitadel's authentication and management APIs in Python.
-    license: Apache-2.0
-    license_file: LICENSE
-    repository: https://github.com/zitadel/client-python
-    homepage: https://zitadel.com/
+  summary: Official Zitadel SDK for Python. Authenticate and access Zitadel's authentication and management APIs in Python.
+  license: Apache-2.0
+  license_file: LICENSE
+  repository: https://github.com/zitadel/client-python
+  homepage: https://zitadel.com/
 
 extra:
-    recipe-maintainers:
-        - "0xbe7a"
+  recipe-maintainers:
+    - "0xbe7a"
