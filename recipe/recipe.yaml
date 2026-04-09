@@ -1,5 +1,5 @@
 context:
-  version: "4.1.0"
+  version: "4.1.1"
 
 package:
   name: zitadel-client
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/z/zitadel-client/zitadel_client-${{ version }}.tar.gz
-    sha256: 9fe309030546fd33c9f677bc326e6610488ae830a5fef353320761ce35579a5a
+    sha256: fcf923655061699ff515e12849c1a4fd7a8d450a6f13ea00f81d0024d1f3e7a7
 
 build:
   number: 0
