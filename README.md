@@ -33,14 +33,14 @@ Current release info
 Installing zitadel-client
 =========================
 
-Installing `zitadel-client` from the `conda-forge/label/zitadel-client_rc` channel can be achieved by adding `conda-forge/label/zitadel-client_rc` to your channels with:
+Installing `zitadel-client` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/zitadel-client_rc
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/zitadel-client_rc` channel has been enabled, `zitadel-client` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `zitadel-client` can be installed with `conda`:
 
 ```
 conda install zitadel-client
@@ -55,26 +55,26 @@ mamba install zitadel-client
 It is possible to list all of the versions of `zitadel-client` available on your platform with `conda`:
 
 ```
-conda search zitadel-client --channel conda-forge/label/zitadel-client_rc
+conda search zitadel-client --channel conda-forge
 ```
 
 or with `mamba`:
 
 ```
-mamba search zitadel-client --channel conda-forge/label/zitadel-client_rc
+mamba search zitadel-client --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search zitadel-client --channel conda-forge/label/zitadel-client_rc
+mamba repoquery search zitadel-client --channel conda-forge
 
 # List packages depending on `zitadel-client`:
-mamba repoquery whoneeds zitadel-client --channel conda-forge/label/zitadel-client_rc
+mamba repoquery whoneeds zitadel-client --channel conda-forge
 
 # List dependencies of `zitadel-client`:
-mamba repoquery depends zitadel-client --channel conda-forge/label/zitadel-client_rc
+mamba repoquery depends zitadel-client --channel conda-forge
 ```
 
 
